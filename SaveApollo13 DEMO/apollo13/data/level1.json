@@ -1,0 +1,2654 @@
+{
+ "name": "Apollo 13 - Level 1: Launch Sequence",
+ "tile_size": 32,
+ "width": 24,
+ "height": 21,
+ "atlas": {
+  "image": "res://assets/tileset.png",
+  "columns": 8,
+  "tile_names": {
+   "void": 0,
+   "floor": 1,
+   "hull": 2,
+   "window_open": 3,
+   "window_covered": 4,
+   "hatch_open": 5,
+   "hatch_closed": 6,
+   "whiteroom_floor": 7,
+   "whiteroom_wall": 8,
+   "arm_walkway": 9,
+   "arm_rail": 10,
+   "checklist": 11,
+   "gate": 12,
+   "mdc_0_0": 13,
+   "mdc_1_0": 14,
+   "mdc_2_0": 15,
+   "mdc_3_0": 16,
+   "mdc_4_0": 17,
+   "mdc_5_0": 18,
+   "mdc_6_0": 19,
+   "mdc_7_0": 20,
+   "mdc_8_0": 21,
+   "mdc_9_0": 22,
+   "leb_0_0": 23,
+   "leb_1_0": 24,
+   "leb_2_0": 25,
+   "leb_3_0": 26,
+   "leb_4_0": 27,
+   "leb_5_0": 28,
+   "leb_6_0": 29,
+   "leb_7_0": 30,
+   "leb_8_0": 31,
+   "leb_9_0": 32,
+   "lheb_0_0": 33,
+   "lheb_0_1": 34,
+   "lheb_0_2": 35,
+   "lheb_0_3": 36,
+   "lheb_0_4": 37,
+   "rheb_0_0": 38,
+   "rheb_0_1": 39,
+   "rheb_0_2": 40,
+   "rheb_0_3": 41,
+   "rheb_0_4": 42,
+   "couch_0_0": 43,
+   "couch_1_0": 44,
+   "couch_0_1": 45,
+   "couch_1_1": 46,
+   "couch_0_2": 47,
+   "couch_1_2": 48
+  },
+  "solid_ids": [
+   0,
+   2,
+   3,
+   4,
+   6,
+   8,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48
+  ]
+ },
+ "layers": {
+  "ground": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    5,
+    5,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "objects": [
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    12,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    33,
+    -1,
+    -1,
+    43,
+    44,
+    -1,
+    -1,
+    -1,
+    43,
+    44,
+    -1,
+    -1,
+    -1,
+    43,
+    44,
+    -1,
+    -1,
+    38,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    34,
+    -1,
+    -1,
+    45,
+    46,
+    -1,
+    -1,
+    -1,
+    45,
+    46,
+    11,
+    -1,
+    -1,
+    45,
+    46,
+    -1,
+    -1,
+    39,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    35,
+    -1,
+    -1,
+    47,
+    48,
+    -1,
+    -1,
+    -1,
+    47,
+    48,
+    -1,
+    -1,
+    -1,
+    47,
+    48,
+    -1,
+    -1,
+    40,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    36,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    41,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    37,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    42,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ]
+  ]
+ },
+ "prologue_minigames": [
+  "medical_exam",
+  "suit_up"
+ ],
+ "player_start": [
+  11,
+  2
+ ],
+ "npcs": [
+  {
+   "id": "pad_leader",
+   "sprite": "npc_pad_leader.png",
+   "tile": [
+    13,
+    2
+   ]
+  },
+  {
+   "id": "lovell",
+   "sprite": "astronaut_seated.png",
+   "tile": [
+    6,
+    10
+   ],
+   "size": [
+    2,
+    3
+   ]
+  },
+  {
+   "id": "haise",
+   "sprite": "astronaut_seated.png",
+   "tile": [
+    16,
+    10
+   ],
+   "size": [
+    2,
+    3
+   ]
+  }
+ ],
+ "zones": [
+  {
+   "id": "white_room",
+   "name": "White Room - Launch Tower, 320 ft level",
+   "rect": [
+    9,
+    1,
+    14,
+    3
+   ]
+  },
+  {
+   "id": "hatch_area",
+   "name": "Hatch and Access Area",
+   "rect": [
+    6,
+    5,
+    17,
+    6
+   ]
+  },
+  {
+   "id": "mdc",
+   "name": "Main Display Console",
+   "rect": [
+    7,
+    8,
+    16,
+    8
+   ]
+  },
+  {
+   "id": "couches",
+   "name": "Crew Couches",
+   "rect": [
+    5,
+    9,
+    18,
+    14
+   ]
+  },
+  {
+   "id": "lheb",
+   "name": "Left-Hand Equipment Bay - Life Support",
+   "rect": [
+    3,
+    9,
+    4,
+    15
+   ]
+  },
+  {
+   "id": "rheb",
+   "name": "Right-Hand Equipment Bay - Breakers and Safety",
+   "rect": [
+    19,
+    9,
+    20,
+    15
+   ]
+  },
+  {
+   "id": "leb",
+   "name": "Lower Equipment Bay - Navigation and Communications",
+   "rect": [
+    5,
+    16,
+    18,
+    18
+   ]
+  }
+ ],
+ "hatch_tiles": [
+  [
+   11,
+   4
+  ],
+  [
+   12,
+   4
+  ]
+ ],
+ "covered_window_tiles": [
+  [
+   18,
+   6
+  ],
+  [
+   4,
+   7
+  ],
+  [
+   19,
+   7
+  ]
+ ],
+ "interactables": [
+  {
+   "id": "pad_leader",
+   "n": 1,
+   "name": "Pad Leader (Guenter Wendt)",
+   "tiles": [
+    [
+     13,
+     2
+    ]
+   ],
+   "required": false,
+   "appearance": "Technician in white coveralls and cap, glasses, bow tie.",
+   "steps": {
+    "default": {
+     "title": "Guenter Wendt - Pad Leader",
+     "pages": [
+      "Welcome to the White Room. We are 320 feet up the launch tower, at the end of the access arm. Below your boots is a 363-foot Saturn V rocket.",
+      "Commander Lovell and Fred Haise are already strapped in. Your couch is the centre one, right under the hatch.",
+      "Go on through the hatch. Once you are aboard, my closeout crew seals it and the arm swings away."
+     ]
+    }
+   },
+   "stand": [
+    [
+     12,
+     2
+    ],
+    [
+     13,
+     1
+    ],
+    [
+     13,
+     3
+    ],
+    [
+     14,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "hatch",
+   "n": 2,
+   "name": "Side hatch",
+   "tiles": [
+    [
+     11,
+     4
+    ],
+    [
+     12,
+     4
+    ]
+   ],
+   "required": false,
+   "appearance": "Two-tile opening with hazard stripes; a heavy grey door with a round window once closed.",
+   "steps": {
+    "default": {
+     "title": "Side Hatch (sealed)",
+     "pages": [
+      "The closeout crew has sealed the hatch. This is the only way in or out on the pad.",
+      "After the Apollo 1 fire in 1967 the hatch was redesigned as a single unit that opens outward in a few seconds.",
+      "The tunnel at the top of the capsule is a different door. It will lead to the Lunar Module, but only after docking in space."
+     ]
+    }
+   },
+   "stand": [
+    [
+     11,
+     3
+    ],
+    [
+     11,
+     5
+    ],
+    [
+     12,
+     3
+    ],
+    [
+     12,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "window_left",
+   "n": 3,
+   "name": "Window (commander's forward window)",
+   "tiles": [
+    [
+     5,
+     6
+    ]
+   ],
+   "required": false,
+   "appearance": "Bright blue pane in a metal frame in the north-west hull.",
+   "steps": {
+    "default": {
+     "title": "Window",
+     "pages": [
+      "Through the glass: the red steel of the launch tower, the access arm, and beyond it the Florida coast and the Atlantic.",
+      "A boost protective cover wraps the capsule for launch. It leaves only this window and the hatch window clear."
+     ]
+    },
+    "orbit": {
+     "title": "Window - Earth orbit",
+     "pages": [
+      "The curve of the Earth fills the window: blue ocean, white cloud, a thin bright line of atmosphere.",
+      "Odyssey is circling the Earth about 185 km up, at nearly 28,000 km/h. One lap takes about 88 minutes."
+     ]
+    }
+   },
+   "stand": [
+    [
+     5,
+     7
+    ],
+    [
+     6,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "window_right",
+   "n": 4,
+   "name": "Covered windows",
+   "tiles": [
+    [
+     18,
+     6
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     19,
+     7
+    ]
+   ],
+   "required": false,
+   "appearance": "Beige hatched panes: the boost protective cover blocks the view.",
+   "steps": {
+    "default": {
+     "title": "Window (covered)",
+     "pages": [
+      "Nothing to see. The boost protective cover shields this window from the airstream during launch.",
+      "The cover is attached to the launch escape tower. Both are thrown clear about 3 minutes 20 seconds into the flight."
+     ]
+    },
+    "orbit": {
+     "title": "Window - Earth orbit",
+     "pages": [
+      "The cover is gone. Sunlight and the blue of the Pacific pour in."
+     ]
+    }
+   },
+   "stand": [
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     17,
+     6
+    ],
+    [
+     18,
+     7
+    ],
+    [
+     19,
+     8
+    ]
+   ]
+  },
+  {
+   "id": "flight_panel",
+   "n": 5,
+   "name": "Flight control panel (Panel 1)",
+   "tiles": [
+    [
+     7,
+     7
+    ],
+    [
+     8,
+     7
+    ],
+    [
+     9,
+     7
+    ]
+   ],
+   "required": true,
+   "appearance": "Left third of the console: two attitude balls, five engine lights, red abort light.",
+   "steps": {
+    "default": {
+     "title": "Flight Control Panel",
+     "pages": [
+      "This is the commander's side of the main display console. The two round 'eight-ball' indicators show which way the spacecraft is pointing.",
+      "The five lights in the middle stand for the five engines of the rocket stage that is burning. A light that comes ON means that engine is not making thrust.",
+      "During launch the crew does not steer. The Saturn V's own computer, in the Instrument Unit ring near the top of the rocket, flies it. The crew watches these instruments and is ready to abort.",
+      "FLIGHT DATA\nVehicle: Saturn V  SA-508\nSpacecraft: CSM-109 'Odyssey' + LM-7 'Aquarius'\nPad: Launch Complex 39A, Kennedy Space Center\nLiftoff: 11 April 1970, 2:13 p.m. local (19:13 UTC)\nDestination: Fra Mauro highlands, the Moon"
+     ]
+    }
+   },
+   "stand": [
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     8,
+     6
+    ],
+    [
+     8,
+     8
+    ],
+    [
+     9,
+     6
+    ],
+    [
+     9,
+     8
+    ]
+   ]
+  },
+  {
+   "id": "main_switches",
+   "n": 6,
+   "name": "Main switches + caution and warning (Panel 2)",
+   "tiles": [
+    [
+     10,
+     7
+    ],
+    [
+     11,
+     7
+    ],
+    [
+     12,
+     7
+    ],
+    [
+     13,
+     7
+    ]
+   ],
+   "required": true,
+   "appearance": "Centre of the console: amber warning matrix, green computer display, rows of toggle switches.",
+   "steps": {
+    "default": {
+     "title": "Main Switches",
+     "pages": [
+      "The centre of the console holds the caution and warning lights, a computer keyboard, and hundreds of switches. Each has a metal guard so a floating elbow cannot flip it.",
+      "The pre-launch checklist will tell you when to set these."
+     ]
+    },
+    "prelaunch": {
+     "title": "Main Switches - Launch Configuration",
+     "pages": [
+      "Checklist step: set the Emergency Detection System (EDS) for launch.",
+      "The EDS watches the rocket. Early in the flight a break-up could happen faster than a human can react."
+     ],
+     "choice": {
+      "prompt": "Set EDS automatic abort to:",
+      "options": [
+       {
+        "label": "AUTO",
+        "ok": true,
+        "reply": "EDS to AUTO. If two first-stage engines fail or the rocket tumbles, the escape tower will pull the Command Module clear by itself. Master alarm test: lights and tone OK."
+       },
+       {
+        "label": "OFF",
+        "ok": false,
+        "reply": "Lovell: 'Not yet, Jack. We want automatic abort armed for the first two minutes. Set it to AUTO.'"
+       }
+      ]
+     }
+    }
+   },
+   "stand": [
+    [
+     10,
+     6
+    ],
+    [
+     10,
+     8
+    ],
+    [
+     11,
+     6
+    ],
+    [
+     11,
+     8
+    ],
+    [
+     12,
+     6
+    ],
+    [
+     12,
+     8
+    ],
+    [
+     13,
+     6
+    ],
+    [
+     13,
+     8
+    ]
+   ]
+  },
+  {
+   "id": "electrical_panel",
+   "n": 7,
+   "name": "Electrical monitoring panel (Panel 3)",
+   "tiles": [
+    [
+     14,
+     7
+    ],
+    [
+     15,
+     7
+    ],
+    [
+     16,
+     7
+    ]
+   ],
+   "required": true,
+   "appearance": "Right third of the console: four round meters, three green fuel-cell indicators.",
+   "steps": {
+    "default": {
+     "title": "Electrical Power",
+     "pages": [
+      "Odyssey makes its own electricity. Three fuel cells in the Service Module combine hydrogen and oxygen. The by-product is the crew's drinking water.",
+      "The Command Module itself carries only three small batteries. They are saved for re-entry, after the Service Module has been thrown away.",
+      "ELECTRICAL STATUS\nFuel cell 1: ON LINE\nFuel cell 2: ON LINE\nFuel cell 3: ON LINE\nMain bus A: 28 V DC   Main bus B: 28 V DC\nEntry batteries A, B, C: CHARGED\nAll indications normal."
+     ]
+    },
+    "systems": {
+     "title": "Electrical Power - Instrument Inspection",
+     "minigame": "instrument_inspection",
+     "pages": [
+      "Odyssey makes its own electricity. Three fuel cells in the Service Module combine hydrogen and oxygen. The by-product is the crew's drinking water.",
+      "The Command Module itself carries only three small batteries. They are saved for re-entry, after the Service Module has been thrown away.",
+      "Lovell: 'Time for a panel drill, Jack. Five gauges. Tell me which ones are out of limits, then call it in to Mission Control.'\n(Practice values, not real mission data.)"
+     ]
+    }
+   },
+   "stand": [
+    [
+     14,
+     6
+    ],
+    [
+     14,
+     8
+    ],
+    [
+     15,
+     6
+    ],
+    [
+     15,
+     8
+    ],
+    [
+     16,
+     6
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     17,
+     7
+    ]
+   ]
+  },
+  {
+   "id": "lovell",
+   "n": 8,
+   "name": "Left couch - Jim Lovell (Commander)",
+   "tiles": [
+    [
+     6,
+     10
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     7,
+     11
+    ],
+    [
+     6,
+     12
+    ],
+    [
+     7,
+     12
+    ]
+   ],
+   "required": false,
+   "appearance": "Beige couch with a suited astronaut strapped in.",
+   "steps": {
+    "default": {
+     "title": "Jim Lovell - Commander",
+     "pages": [
+      "Welcome aboard, Jack. Short notice, I know. You have trained for this seat as backup, and you know Odyssey as well as anyone.",
+      "This is my fourth trip: Gemini 7, Gemini 12, Apollo 8, and now this one. On Apollo 8 we only circled the Moon. This time Fred and I plan to walk on it.",
+      "Find the checklist by your couch and work through it. When everything is green, strap in."
+     ]
+    }
+   },
+   "stand": [
+    [
+     5,
+     10
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     5,
+     12
+    ],
+    [
+     6,
+     9
+    ],
+    [
+     6,
+     13
+    ],
+    [
+     7,
+     9
+    ],
+    [
+     7,
+     13
+    ],
+    [
+     8,
+     10
+    ],
+    [
+     8,
+     11
+    ],
+    [
+     8,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "couch_cmp",
+   "n": 9,
+   "name": "Centre couch (player's seat)",
+   "tiles": [
+    [
+     11,
+     10
+    ],
+    [
+     12,
+     10
+    ],
+    [
+     11,
+     11
+    ],
+    [
+     12,
+     11
+    ],
+    [
+     11,
+     12
+    ],
+    [
+     12,
+     12
+    ]
+   ],
+   "required": true,
+   "appearance": "Empty beige couch with harness straps.",
+   "steps": {
+    "default": {
+     "title": "Centre Couch",
+     "pages": [
+      "Your couch. The Command Module Pilot rides in the middle for launch.",
+      "The couches hang on shock-absorbing struts, and the crew lies on their backs so the push of the rocket presses them into the seat instead of pulling blood from the head.",
+      "Finish the pre-launch checklist before you strap in."
+     ]
+    },
+    "prelaunch": {
+     "title": "Centre Couch",
+     "minigame": "launch_sequence",
+     "pages": [
+      "Checklist complete. You climb into the couch and pull the harness tight.",
+      "Lovell: 'Launch Control, Apollo 13. All three of us are strapped in and ready.'"
+     ]
+    }
+   },
+   "stand": [
+    [
+     10,
+     10
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     10,
+     12
+    ],
+    [
+     11,
+     9
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     12,
+     9
+    ],
+    [
+     12,
+     13
+    ],
+    [
+     13,
+     10
+    ],
+    [
+     13,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "haise",
+   "n": 10,
+   "name": "Right couch - Fred Haise (Lunar Module Pilot)",
+   "tiles": [
+    [
+     16,
+     10
+    ],
+    [
+     17,
+     10
+    ],
+    [
+     16,
+     11
+    ],
+    [
+     17,
+     11
+    ],
+    [
+     16,
+     12
+    ],
+    [
+     17,
+     12
+    ]
+   ],
+   "required": false,
+   "appearance": "Beige couch with a suited astronaut strapped in.",
+   "steps": {
+    "default": {
+     "title": "Fred Haise - Lunar Module Pilot",
+     "pages": [
+      "First spaceflight for me, same as you. My spacecraft is not this one. I fly the Lunar Module, Aquarius.",
+      "You cannot reach Aquarius from here. It is folded up below us, inside a metal adapter between the Service Module and the rocket's third stage.",
+      "So there are three machines stacked on this pad: the Saturn V rocket that lifts us, the Command and Service Module we live in, and the Lunar Module that lands. Once we are on the way to the Moon you will turn Odyssey around, dock with Aquarius and pull it out."
+     ]
+    }
+   },
+   "stand": [
+    [
+     15,
+     10
+    ],
+    [
+     15,
+     11
+    ],
+    [
+     15,
+     12
+    ],
+    [
+     16,
+     9
+    ],
+    [
+     16,
+     13
+    ],
+    [
+     17,
+     9
+    ],
+    [
+     17,
+     13
+    ],
+    [
+     18,
+     10
+    ],
+    [
+     18,
+     11
+    ],
+    [
+     18,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "checklist",
+   "n": 11,
+   "name": "Mission checklist",
+   "tiles": [
+    [
+     13,
+     11
+    ]
+   ],
+   "required": true,
+   "appearance": "Clipboard with a paper checklist on a short stand beside the centre couch.",
+   "steps": {
+    "default": {
+     "title": "Pre-Launch Checklist",
+     "pages": [
+      "Apollo crews flew by checklist. Every switch position for every phase of the mission was written down and read aloud.",
+      "{CHECKLIST}"
+     ]
+    },
+    "prelaunch": {
+     "title": "Pre-Launch Checklist - Sign-off",
+     "pages": [
+      "{CHECKLIST}",
+      "Every system has been inspected and Mission Control has given its GO. You sign off the checklist. One step left: strap into the centre couch."
+     ]
+    }
+   },
+   "stand": [
+    [
+     13,
+     10
+    ],
+    [
+     13,
+     12
+    ],
+    [
+     14,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "o2_panel",
+   "n": 12,
+   "name": "Oxygen monitoring panel",
+   "tiles": [
+    [
+     3,
+     10
+    ],
+    [
+     3,
+     11
+    ]
+   ],
+   "required": true,
+   "appearance": "Two panels on the west wall with blue vertical bar gauges and green status lights.",
+   "steps": {
+    "default": {
+     "title": "Oxygen and Cabin Conditions",
+     "pages": [
+      "The oxygen you breathe is stored as a super-cold liquid in two tanks in the Service Module. The same tanks feed the fuel cells.",
+      "On the pad the cabin holds a mix of 60% oxygen and 40% nitrogen, a fire-safety rule introduced after Apollo 1. Your suit is fed pure oxygen.",
+      "In space the cabin becomes pure oxygen at about one third of sea-level pressure. That keeps the hull light and still gives your lungs all the oxygen they need.",
+      "CABIN STATUS\nOxygen tank 1: FULL   Oxygen tank 2: FULL\nSuit oxygen flow: NORMAL\nCabin pressure: slightly above outside air\nCarbon dioxide: LOW\nCabin temperature: 21 C\nAll indications normal."
+     ]
+    }
+   },
+   "stand": [
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     10
+    ],
+    [
+     4,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "ecs_unit",
+   "n": 13,
+   "name": "Environmental control unit",
+   "tiles": [
+    [
+     3,
+     12
+    ],
+    [
+     3,
+     13
+    ],
+    [
+     3,
+     14
+    ]
+   ],
+   "required": false,
+   "appearance": "Grey canister housings, blue pipes and two coiled suit hoses (blue and red connectors).",
+   "steps": {
+    "default": {
+     "title": "Environmental Control Unit",
+     "pages": [
+      "This machine keeps three people alive in a sealed can. Fans pull cabin and suit air through canisters of lithium hydroxide, a chemical that absorbs the carbon dioxide you breathe out.",
+      "It also removes moisture and controls temperature. The blue and red hoses carry oxygen to and from your suit."
+     ]
+    }
+   },
+   "stand": [
+    [
+     3,
+     15
+    ],
+    [
+     4,
+     12
+    ],
+    [
+     4,
+     13
+    ],
+    [
+     4,
+     14
+    ]
+   ]
+  },
+  {
+   "id": "breakers",
+   "n": 14,
+   "name": "Circuit breaker panel",
+   "tiles": [
+    [
+     20,
+     10
+    ],
+    [
+     20,
+     11
+    ],
+    [
+     20,
+     12
+    ]
+   ],
+   "required": false,
+   "appearance": "Grey panel on the east wall covered in rows of small white push-pull breakers.",
+   "steps": {
+    "default": {
+     "title": "Circuit Breakers",
+     "pages": [
+      "Every circuit in the spacecraft runs through a breaker. If a wire shorts, the breaker pops out and cuts the power before anything overheats.",
+      "A switch on the main console does nothing unless its breaker is pushed in. Checking breakers is part of every checklist."
+     ]
+    }
+   },
+   "stand": [
+    [
+     19,
+     10
+    ],
+    [
+     19,
+     11
+    ],
+    [
+     19,
+     12
+    ],
+    [
+     20,
+     9
+    ]
+   ]
+  },
+  {
+   "id": "emergency",
+   "n": 15,
+   "name": "Emergency equipment",
+   "tiles": [
+    [
+     20,
+     13
+    ],
+    [
+     20,
+     14
+    ]
+   ],
+   "required": false,
+   "appearance": "Red locker with a white cross and a red fire extinguisher.",
+   "steps": {
+    "default": {
+     "title": "Emergency Equipment",
+     "pages": [
+      "Inside: a fire extinguisher, oxygen masks, a medical kit, and survival kits with a life raft and radio for after splashdown.",
+      "The biggest safety system is outside the cabin. The launch escape tower on the capsule's nose is a solid rocket that can drag the Command Module away from a failing Saturn V in seconds.",
+      "The commander can trigger it by twisting a handle by his left hand. The tower is thrown away once the rocket is high enough that it is no longer needed."
+     ]
+    }
+   },
+   "stand": [
+    [
+     19,
+     13
+    ],
+    [
+     19,
+     14
+    ],
+    [
+     20,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "stowage",
+   "n": 16,
+   "name": "Stowage lockers",
+   "tiles": [
+    [
+     7,
+     19
+    ],
+    [
+     8,
+     19
+    ],
+    [
+     13,
+     19
+    ],
+    [
+     16,
+     19
+    ]
+   ],
+   "required": false,
+   "appearance": "Beige locker doors with small latches.",
+   "steps": {
+    "default": {
+     "title": "Stowage Lockers",
+     "pages": [
+      "Food for the trip: freeze-dried meals in plastic bags. You add water from a hand-held water gun and knead the bag.",
+      "The water comes from the fuel cells, so making electricity also makes dinner possible."
+     ]
+    }
+   },
+   "stand": [
+    [
+     7,
+     18
+    ],
+    [
+     8,
+     18
+    ],
+    [
+     13,
+     18
+    ],
+    [
+     16,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "guidance_computer",
+   "n": 17,
+   "name": "Guidance computer (AGC + DSKY)",
+   "tiles": [
+    [
+     9,
+     19
+    ],
+    [
+     10,
+     19
+    ]
+   ],
+   "required": false,
+   "appearance": "Green numeric display over a small keypad, beside a box with status lights.",
+   "steps": {
+    "default": {
+     "title": "Apollo Guidance Computer",
+     "pages": [
+      "The Apollo Guidance Computer weighs about 32 kg and has less memory than a pocket calculator, yet it can navigate to the Moon.",
+      "You talk to it through this display and keyboard, the DSKY, by typing two-digit VERB and NOUN codes. There is a second DSKY on the main console.",
+      "NAVIGATION\nProgram: 02 (pre-launch: holding the gyro platform steady as the Earth turns)\nAt liftoff: switches to Program 11 (monitor the climb)\nLaunch direction: 72 degrees east of north, out over the Atlantic\nTarget: parking orbit about 185 km high\nThen: engine burn toward the Moon about 2.5 hours after liftoff"
+     ]
+    }
+   },
+   "stand": [
+    [
+     9,
+     18
+    ],
+    [
+     10,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "optics",
+   "n": 18,
+   "name": "Sextant and telescope",
+   "tiles": [
+    [
+     11,
+     19
+    ],
+    [
+     12,
+     19
+    ]
+   ],
+   "required": false,
+   "appearance": "Two round eyepieces with silver rims.",
+   "steps": {
+    "default": {
+     "title": "Navigation Optics",
+     "pages": [
+      "A sextant and a telescope look out through the hull. The Command Module Pilot sights on known stars, and the computer uses the angles to work out which way the spacecraft is pointing.",
+      "It is the same idea sailors used for centuries, and it is your job on this flight."
+     ]
+    }
+   },
+   "stand": [
+    [
+     11,
+     18
+    ],
+    [
+     12,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "comm_console",
+   "n": 19,
+   "name": "Communication console",
+   "tiles": [
+    [
+     14,
+     19
+    ],
+    [
+     15,
+     19
+    ]
+   ],
+   "required": true,
+   "appearance": "Speaker grille, tuning dial, green and amber lights, a headset on a coiled cable.",
+   "steps": {
+    "default": {
+     "title": "Communications",
+     "pages": [
+      "Voice, spacecraft data and television all travel on one radio system called Unified S-band. Giant dish antennas around the world keep the link as the Earth turns.",
+      "Before liftoff you talk to Launch Control at Kennedy Space Center in Florida. The moment the rocket clears the tower, Mission Control in Houston, Texas takes over.",
+      "In Houston only one person speaks to the crew: the CAPCOM, who is always a fellow astronaut."
+     ]
+    },
+    "comm_check": {
+     "title": "Communications - Radio Check",
+     "pages": [
+      "Voice, spacecraft data and television all travel on one radio system called Unified S-band.",
+      "Before liftoff you talk to Launch Control in Florida. Once the rocket clears the tower, Mission Control in Houston takes over, and only the CAPCOM, a fellow astronaut, speaks to the crew."
+     ],
+     "choice": {
+      "prompt": "Put on the headset and:",
+      "options": [
+       {
+        "label": "Call for a radio check",
+        "ok": true,
+        "reply": "You: 'Launch Control, Apollo 13, radio check.'\nLaunch Control: 'Thirteen, we read you loud and clear.'\nCommunication system: GO."
+       },
+       {
+        "label": "Stay silent",
+        "ok": false,
+        "reply": "Nobody knows your radio works until you use it. Try again."
+       }
+      ]
+     }
+    },
+    "mission_control": {
+     "title": "Communications - Go / No-Go",
+     "minigame": "comm_houston",
+     "minigame_first": true,
+     "pages": [
+      "In Houston the Flight Director polls his controllers one by one. Each watches a single system.",
+      "BOOSTER: Go.  RETRO: Go.  FIDO: Go.  GUIDANCE: Go.\nEECOM: Go.  GNC: Go.  TELMU: Go.  CONTROL: Go.\nSURGEON: Go.  CAPCOM: Go.",
+      "CAPCOM: 'Apollo 13, Houston. You are GO for launch.'"
+     ],
+     "choice": {
+      "prompt": "You inspected flight, electrical and life support. Report for the crew:",
+      "options": [
+       {
+        "label": "'Apollo 13 is GO.'",
+        "ok": true,
+        "reply": "CAPCOM: 'Roger, Thirteen. Good luck and Godspeed.'\nA 'Go / No-Go' poll means everyone must agree. A single No-Go stops the countdown."
+       },
+       {
+        "label": "'Stand by, Houston.'",
+        "ok": false,
+        "reply": "The countdown holds. Your systems all read normal, so there is no reason to wait. Report again."
+       }
+      ]
+     }
+    }
+   },
+   "stand": [
+    [
+     14,
+     18
+    ],
+    [
+     15,
+     18
+    ]
+   ]
+  }
+ ],
+ "objectives": [
+  {
+   "id": "explore",
+   "text": "Explore the Command Module",
+   "hint": "Walk to all four sides of the cabin.",
+   "type": "zones",
+   "targets": [
+    "mdc",
+    "lheb",
+    "rheb",
+    "leb"
+   ],
+   "markers": [
+    [
+     11,
+     8
+    ],
+    [
+     4,
+     12
+    ],
+    [
+     19,
+     12
+    ],
+    [
+     11,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "checklist",
+   "text": "Inspect the mission checklist",
+   "hint": "The clipboard beside the centre couch.",
+   "type": "interact",
+   "targets": [
+    "checklist"
+   ],
+   "markers": [
+    [
+     14,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "flight",
+   "text": "Visit the flight control panel",
+   "hint": "Left side of the main console.",
+   "type": "interact",
+   "targets": [
+    "flight_panel"
+   ],
+   "markers": [
+    [
+     8,
+     8
+    ]
+   ]
+  },
+  {
+   "id": "comm_check",
+   "text": "Check the communication system",
+   "hint": "Lower equipment bay, right of the telescope.",
+   "type": "interact",
+   "targets": [
+    "comm_console"
+   ],
+   "markers": [
+    [
+     14,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "systems",
+   "text": "Inspect electrical and life support indicators",
+   "hint": "Right side of the main console, and the west wall.",
+   "type": "interact",
+   "targets": [
+    "electrical_panel",
+    "o2_panel"
+   ],
+   "markers": [
+    [
+     15,
+     8
+    ],
+    [
+     4,
+     10
+    ]
+   ]
+  },
+  {
+   "id": "mission_control",
+   "text": "Communicate with Mission Control",
+   "hint": "Back to the communication console.",
+   "type": "interact",
+   "targets": [
+    "comm_console"
+   ],
+   "markers": [
+    [
+     14,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "prelaunch",
+   "text": "Complete the pre-launch checklist",
+   "hint": "Main switches, then sign the checklist, then strap in.",
+   "type": "interact",
+   "ordered": true,
+   "targets": [
+    "main_switches",
+    "checklist",
+    "couch_cmp"
+   ],
+   "markers": [
+    [
+     11,
+     8
+    ],
+    [
+     14,
+     11
+    ],
+    [
+     11,
+     13
+    ]
+   ]
+  },
+  {
+   "id": "launch",
+   "text": "Witness the launch",
+   "hint": "",
+   "type": "cutscene",
+   "targets": [],
+   "markers": []
+  }
+ ],
+ "launch_events": [
+  {
+   "clock": "T-00:50",
+   "skip_if_played": "launch_sequence",
+   "shake": 0,
+   "text": "Launch Control: 'Transfer to internal power.' The rocket now runs on its own batteries."
+  },
+  {
+   "clock": "T-00:09",
+   "skip_if_played": "launch_sequence",
+   "shake": 2,
+   "text": "'Ignition sequence start.' Far below, the five F-1 engines of the first stage light one after another."
+  },
+  {
+   "clock": "T+00:00",
+   "skip_if_played": "launch_sequence",
+   "shake": 5,
+   "text": "LIFTOFF. 2:13 p.m., 11 April 1970. The hold-down arms release 2,900 tonnes of rocket. The computer flips to Program 11."
+  },
+  {
+   "clock": "T+00:12",
+   "shake": 5,
+   "text": "'Tower cleared.' Control of the mission passes from Florida to Mission Control in Houston."
+  },
+  {
+   "clock": "T+01:20",
+   "shake": 6,
+   "text": "Maximum dynamic pressure: the air pushes hardest on the rocket now. The cabin shakes."
+  },
+  {
+   "clock": "T+02:44",
+   "shake": 1,
+   "text": "First stage empty after pushing you to almost 4 g. It drops away, and the five J-2 engines of the second stage ignite."
+  },
+  {
+   "clock": "T+03:21",
+   "shake": 2,
+   "text": "Launch escape tower jettisoned. It takes the protective cover with it, and daylight floods in through every window.",
+   "action": "uncover_windows"
+  },
+  {
+   "clock": "T+05:30",
+   "shake": 4,
+   "text": "A shudder. The centre engine light comes ON: the second stage's middle engine has shut down two minutes early. You call it: 'Inboard.'"
+  },
+  {
+   "clock": "T+05:50",
+   "shake": 2,
+   "text": "Houston: the other four engines are GO. They will burn about 34 seconds longer to make up the difference. The climb continues."
+  },
+  {
+   "clock": "T+09:53",
+   "shake": 2,
+   "text": "Second stage shut down and gone. The single engine of the third stage, the S-IVB, lights to finish the job."
+  },
+  {
+   "clock": "T+12:40",
+   "shake": 0,
+   "text": "Engine cutoff. Earth orbit. Everything loose begins to float. Lovell: 'There's nothing like an interesting launch.'",
+   "action": "orbit"
+  },
+  {
+   "clock": "ORBIT",
+   "shake": 0,
+   "text": "LEVEL COMPLETE. Odyssey, with Aquarius still packed in the rocket behind it, is circling the Earth. Next stop: the Moon."
+  }
+ ]
+}

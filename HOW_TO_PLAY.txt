@@ -1,0 +1,3 @@
+Run the Save Apollo 13.exe file inside
+the following path .\SaveApollo13-DEMO\SaveApollo13\APOLLO13\apollo13
+

@@ -1,0 +1,252 @@
+{
+ "note": "Text and rules for the 'Design Your Mission' mode. These missions are imagined, not history: the real Apollo 13 story is told in the original mode.",
+ "phases": ["LAUNCH", "TRAVEL", "MISSION", "RETURN", "LANDING"],
+
+ "launch": {
+  "script": "res://scripts/mission/stage_launch.gd",
+  "title": "Design Your Mission - Launch",
+  "scene": "Launch pad, Earth. You are strapped in at the top of your rocket.",
+  "instructions": "Prepare the rocket: complete the three checks, then press LAUNCH.",
+  "tasks": [
+   {"id": "fuel", "label": "FUEL THE ROCKET", "seconds": 1.2,
+    "info": "Tanks full. A rocket is mostly fuel: about 90 percent of its weight at liftoff is propellant."},
+   {"id": "systems", "label": "CHECK THE SYSTEMS", "seconds": 1.0,
+    "info": "Guidance, power and life support are GO. Every system is tested before the engines light."},
+   {"id": "crew", "label": "SEAL THE HATCH", "seconds": 0.9,
+    "info": "Hatch sealed, straps tight. The cabin is now your own small world."}
+  ],
+  "countdown": 5,
+  "ready_text": "All checks complete. You are GO for launch. Press LAUNCH when ready.",
+  "locked_text": "Not yet. Finish all three checks before launching.",
+  "liftoff_text": "LIFTOFF! To reach orbit the rocket must speed up to about 28,000 km/h.",
+  "complete_title": "YOU ARE IN SPACE",
+  "complete_text": "The engines cut off and everything floats. The sky has turned from blue to black, because there is no air up here to scatter the sunlight.\n\nNow choose where your mission will go."
+ },
+
+ "destination": {
+  "script": "res://scripts/mission/stage_destination.gd",
+  "title": "Choose Your Destination",
+  "scene": "Earth orbit. Three missions are possible. You can fly only one.",
+  "instructions": "Read the three mission cards and choose ONE destination.",
+  "options": [
+   {"id": "moon", "name": "THE MOON", "mission": "LUNAR EXPLORATION", "image": "res://assets/levels/moon.png", "scale": 4,
+    "distance": "384,000 km away - about 3 days",
+    "text": "Land on the Moon, explore its surface, collect scientific samples and plant an Earth flag.",
+    "hazard": "Return hazards: asteroids and space debris"},
+   {"id": "mars", "name": "MARS", "mission": "MARS SCIENTIFIC BASE", "image": "res://assets/mission/mars.png", "scale": 2,
+    "distance": "At least 55 million km away - about 7 months",
+    "text": "Land on Mars, repair a broken hover vehicle and build a scientific research base.",
+    "hazard": "Return hazards: asteroids and space debris"},
+   {"id": "satellite", "name": "SATELLITE", "mission": "SATELLITE REPAIR AND EARTH OBSERVATION", "image": "res://assets/mission/satellite_broken.png", "scale": 2,
+    "distance": "400 km above Earth - a few hours",
+    "text": "Reach a damaged satellite, repair it and photograph Earth for scientific research.",
+    "hazard": "Return hazard: space debris"}
+  ]
+ },
+
+ "missions": {
+  "moon": {
+   "name": "LUNAR EXPLORATION", "destination": "The Moon", "surface": "res://data/mission_moon.json",
+   "briefing": "Destination: the Moon.\n\nYou will land, collect 5 samples, explore 3 landmarks and plant the Earth flag. On the way home you must steer clear of asteroids and space debris.",
+   "objectives": ["Launched from Earth", "Landed on the Moon", "Collected 5 Moon samples", "Explored 3 lunar landmarks", "Planted the Earth flag", "Avoided asteroids and space debris", "Landed safely on Earth"],
+   "congratulations": "Congratulations! You walked on another world and brought pieces of it home. Scientists will study your samples for decades, just as they still study the rocks brought back by the Apollo crews.",
+   "arrive": {"kind": "land", "body": "res://assets/levels/moon.png", "body_scale": 3, "ground": [150, 152, 160], "ground_dark": [118, 120, 130],
+    "title": "Lunar Landing", "scene": "Lunar orbit. The grey surface slides past below.",
+    "instructions": "Watch the approach, then press the button to start the landing burn.",
+    "lines": ["Three days after launch, the Moon fills the window.", "It has no air, so parachutes are useless here. The only way down is to brake with the engine."],
+    "button": "START LANDING BURN", "action_text": "Engine firing. Speed dropping. 30 metres... 10 metres... dust is blowing...",
+    "complete_title": "TOUCHDOWN ON THE MOON", "complete_text": "Contact! The engine stops and the dust falls straight back down, with no air to hold it up.\n\nYou open the hatch and climb down the ladder."},
+   "depart": {"kind": "takeoff", "ground": [150, 152, 160], "ground_dark": [118, 120, 130],
+    "title": "Lunar Liftoff", "scene": "The lunar surface. Samples are stowed and the flag is standing.",
+    "instructions": "Press the button to lift off and start the journey home.",
+    "lines": ["Gravity here is one sixth of Earth's, so a small engine is enough to leave."],
+    "button": "LIFT OFF", "action_text": "Ascent engine firing. The flag and your bootprints shrink below you.",
+    "complete_title": "HEADING HOME", "complete_text": "You are on course for Earth, 384,000 km away.\n\nMission Control: 'Stay sharp. Radar shows asteroids and old space debris on your path.'"}
+  },
+  "mars": {
+   "name": "MARS SCIENTIFIC BASE", "destination": "Mars", "surface": "res://data/mission_mars.json",
+   "briefing": "Destination: Mars.\n\nYou will land, repair a broken hover vehicle and use it to build a research base with 4 parts. On the way home you must steer clear of asteroids and space debris.",
+   "objectives": ["Launched from Earth", "Landed on Mars", "Repaired the hover vehicle", "Built the research base (4 parts)", "Avoided asteroids and space debris", "Landed safely on Earth"],
+   "congratulations": "Congratulations! You built the first research base on another planet. The science done there may one day answer an old question: was there ever life on Mars?",
+   "arrive": {"kind": "land", "body": "res://assets/mission/mars.png", "body_scale": 2, "ground": [178, 96, 62], "ground_dark": [140, 70, 46], "sky": [214, 160, 120],
+    "title": "Mars Landing", "scene": "Mars orbit, after seven months of travel.",
+    "instructions": "Watch the approach, then press the button to start the landing.",
+    "lines": ["Mars at last: a cold desert world, red with rusty dust.", "Its air is a hundred times thinner than Earth's. It slows you a little, but you still need the engine to land."],
+    "button": "START LANDING BURN", "action_text": "Heat shield away. Engine firing. Red dust is rising to meet you...",
+    "complete_title": "TOUCHDOWN ON MARS", "complete_text": "You are down. Gravity here is about one third of Earth's, and the sky is the colour of butterscotch.\n\nYou open the hatch and step onto Mars."},
+   "depart": {"kind": "takeoff", "ground": [178, 96, 62], "ground_dark": [140, 70, 46], "sky": [214, 160, 120],
+    "title": "Liftoff from Mars", "scene": "The Mars surface. The base lights are on behind you.",
+    "instructions": "Press the button to lift off and start the journey home.",
+    "lines": ["The base will keep sending data to Earth long after you leave."],
+    "button": "LIFT OFF", "action_text": "Engines at full power. The research base shrinks to a white dot on the red plain.",
+    "complete_title": "HEADING HOME", "complete_text": "You are on course for Earth.\n\nMission Control: 'Stay sharp. Radar shows asteroids and old space debris on your path.'"}
+  },
+  "satellite": {
+   "name": "SATELLITE REPAIR AND EARTH OBSERVATION", "destination": "Earth-observation satellite, 400 km up",
+   "briefing": "Destination: a damaged Earth-observation satellite.\n\nYou will dock with it, find and repair 3 faults, then take 3 photographs of Earth. On the way home you must steer clear of space debris.",
+   "objectives": ["Launched from Earth", "Docked with the satellite", "Repaired 3 damaged systems", "Took 3 photographs of Earth", "Avoided space debris", "Landed safely on Earth"],
+   "congratulations": "Congratulations! The satellite is working again and your photographs are already with the scientists. Satellites like this one track storms, ice and deserts to show how our planet is changing.",
+   "arrive": {"kind": "dock", "title": "Approach and Docking", "scene": "Low Earth orbit, 400 km up. The satellite is dead ahead.",
+    "instructions": "Watch the approach, then press the button to dock.",
+    "lines": ["There it is: a torn solar wing, a bent dish and no power light.", "You and the satellite are both moving at 28,000 km/h, so you close in very slowly."],
+    "button": "DOCK WITH THE SATELLITE", "action_text": "Closing at a few centimetres per second. Steady...",
+    "complete_title": "DOCKED", "complete_text": "The latches close with a clunk. You put on your suit and float outside to inspect the damage."},
+   "depart": {"kind": "undock", "title": "Undocking", "scene": "Low Earth orbit. The satellite is working again.",
+    "instructions": "Press the button to undock and start the journey home.",
+    "lines": ["Its green power light is on and the dish is tracking Earth."],
+    "button": "UNDOCK", "action_text": "Latches open. You drift clear of the satellite.",
+    "complete_title": "HEADING HOME", "complete_text": "You fire the engine to drop out of orbit.\n\nMission Control: 'Careful. This orbit is crowded with space debris from old missions.'"}
+  }
+ },
+
+ "transit_script": "res://scripts/mission/stage_transit.gd",
+
+ "earth_landing": {
+  "kind": "earth", "title": "Earth Landing", "scene": "Home. The blue planet fills the window.",
+  "instructions": "Watch the approach, then press the button to open the parachutes.",
+  "lines": ["You hit the atmosphere at great speed. Air rubbing on the heat shield glows like fire.", "Unlike the Moon, Earth has thick air, so parachutes can do the braking."],
+  "button": "OPEN PARACHUTES", "action_text": "Parachutes out! Three canopies fill with air and the capsule swings gently below them.",
+  "complete_title": "SPLASHDOWN!", "complete_text": "The capsule settles into the ocean. Recovery ships are already on their way.\n\nYou are home."
+ },
+
+ "return": {
+  "script": "res://scripts/mission/stage_return.gd",
+  "title": "Return Journey",
+  "hull": 3,
+  "moon": {"scene": "Deep space, on the way back from the Moon.", "asteroids": true, "seconds": 38,
+   "instructions": "Steer with the arrow keys or W A S D. Avoid the ASTEROIDS and the SPACE DEBRIS.",
+   "intro": "Asteroids are natural rocks. Debris is junk from old missions. A yellow mark on the right warns you where each one will appear."},
+  "mars": {"scene": "Deep space, on the long way back from Mars.", "asteroids": true, "seconds": 44,
+   "instructions": "Steer with the arrow keys or W A S D. Avoid the ASTEROIDS and the SPACE DEBRIS.",
+   "intro": "You will cross paths with stray asteroids and old debris. A yellow mark on the right warns you where each one will appear."},
+  "satellite": {"scene": "Low Earth orbit, on the way down from the satellite.", "asteroids": false, "seconds": 34,
+   "instructions": "Steer with the arrow keys or W A S D. Avoid the SPACE DEBRIS from old missions.",
+   "intro": "No asteroids this close to Earth: only broken satellite parts and metal fragments. A yellow mark on the right warns you where each one will appear."},
+  "hit_text": "Impact! Hull damaged.",
+  "rescue_text": "Hull critical. Mission Control patches you up and guides you back on course. Obstacles ahead will come slower.",
+  "complete_title": "EARTH AHEAD",
+  "complete_text": "You made it through. Earth is dead ahead and growing fast."
+ },
+
+ "summary": {
+  "script": "res://scripts/mission/stage_summary.gd",
+  "title": "MISSION COMPLETE",
+  "again": "PLAY ANOTHER MISSION",
+  "menu": "RETURN TO STARTING MENU"
+ },
+
+ "minigames": {
+  "hover_repair": {
+   "script": "res://scripts/mission/repair_task.gd",
+   "title": "Repair the Hover Vehicle", "scene": "Mars surface - beside the broken hover vehicle",
+   "instructions": "Find the 3 faults: click a damaged part of the vehicle, then choose the right repair.",
+   "image_broken": "res://assets/mission/hover_broken.png", "image_fixed": "res://assets/mission/hover_fixed.png", "scale": 5,
+   "backdrop": [196, 120, 84],
+   "tools": [
+    {"id": "seal", "label": "Fit a new canopy panel"},
+    {"id": "bolt", "label": "Bolt the part back on"},
+    {"id": "cell", "label": "Swap in a charged power cell"},
+    {"id": "paint", "label": "Repaint the bodywork"}
+   ],
+   "faults": [
+    {"id": "canopy", "name": "Cracked canopy", "rect": [22, 3, 27, 9], "tool": "seal",
+     "problem": "The clear canopy is cracked. Dust would get into the cockpit.",
+     "fixed": "New canopy panel fitted and sealed."},
+    {"id": "pad", "name": "Loose lift pad", "rect": [20, 21, 12, 9], "tool": "bolt",
+     "problem": "A lift pad has dropped off its mount. Without it the vehicle cannot float level.",
+     "fixed": "Lift pad bolted back in place."},
+    {"id": "power", "name": "Dead power cell", "rect": [10, 13, 12, 7], "tool": "cell",
+     "problem": "The power cell is flat after months in the cold. Mars nights fall to about -70 C.",
+     "fixed": "Charged power cell installed. The dashboard lights up."}
+   ],
+   "miss_text": "That part looks fine. Look for damage: cracks, loose parts, dead lights.",
+   "wrong_tool": "That will not fix this fault. Read the problem again.",
+   "complete_title": "Hover vehicle repaired",
+   "complete_text": "The lift pads glow blue and the vehicle rises a hand's width off the ground.\n\nIt floats on a cushion of force, so it will not sink into the soft Mars dust. Climb in: it will carry the base parts."
+  },
+  "satellite_repair": {
+   "script": "res://scripts/mission/repair_task.gd",
+   "title": "Repair the Satellite", "scene": "Spacewalk - outside the damaged satellite, 400 km above Earth",
+   "instructions": "Find the 3 faults: click a damaged part of the satellite, then choose the right repair.",
+   "image_broken": "res://assets/mission/satellite_broken.png", "image_fixed": "res://assets/mission/satellite_fixed.png", "scale": 5,
+   "tools": [
+    {"id": "panel", "label": "Replace the torn panel section"},
+    {"id": "align", "label": "Straighten and re-aim the dish"},
+    {"id": "cell", "label": "Swap the failed power unit"},
+    {"id": "polish", "label": "Polish the camera lens"}
+   ],
+   "faults": [
+    {"id": "wing", "name": "Torn solar wing", "rect": [49, 12, 22, 16], "tool": "panel",
+     "problem": "A piece of debris tore through the right solar wing. The satellite is short of power.",
+     "fixed": "New panel section clipped in. Power is flowing from both wings."},
+    {"id": "dish", "name": "Bent antenna dish", "rect": [30, 0, 22, 11], "tool": "align",
+     "problem": "The dish is knocked sideways and points away from Earth. No data can be sent down.",
+     "fixed": "Dish straightened and locked onto Earth."},
+    {"id": "power", "name": "Failed power unit", "rect": [37, 15, 8, 8], "tool": "cell",
+     "problem": "The status light is red: the power unit has failed.",
+     "fixed": "Power unit replaced. The status light turns green."}
+   ],
+   "miss_text": "That part looks fine. Look for damage: torn panels, bent parts, red lights.",
+   "wrong_tool": "That will not fix this fault. Read the problem again.",
+   "complete_title": "Satellite repaired",
+   "complete_text": "All three systems are working. The satellite wakes up and turns its camera towards Earth.\n\nNext: use that camera to photograph Earth."
+  },
+  "earth_photo": {
+   "script": "res://scripts/mission/earth_photo.gd",
+   "title": "Photograph Earth", "scene": "The satellite's camera - looking down at Earth from orbit",
+   "instructions": "Move the viewfinder with the mouse (or arrow keys). Frame each target and click (or press E) to take the photograph.",
+   "targets": [
+    {"id": "storm", "name": "Tropical storm", "at": [30, 60], "caption": "STORM",
+     "info": "A tropical storm: a spiral of cloud hundreds of km wide. Satellite photos let forecasters warn people days ahead."},
+    {"id": "ice", "name": "Polar ice cap", "at": [48, 8], "caption": "POLAR ICE",
+     "info": "The polar ice cap. Comparing photos year after year shows how fast the ice is shrinking."},
+    {"id": "desert", "name": "Desert coast", "at": [63, 36], "caption": "DESERT",
+     "info": "A great desert beside green forest. From orbit you can watch deserts spread and forests shrink."}
+   ],
+   "miss_text": "Nothing to study in that frame. Put a target in the centre: the brackets turn green.",
+   "repeat_text": "You already have that photograph. Find the next target.",
+   "complete_title": "Earth observation complete",
+   "complete_text": "Three sharp photographs of Earth, sent down to the scientists in seconds.\n\nFrom up here there are no borders to see: only one small, shared planet."
+  },
+  "build_habitat": {
+   "script": "res://scripts/mission/sequence_task.gd",
+   "title": "Build: Habitat Dome", "scene": "Mars surface - research base, pad 1",
+   "instructions": "Assemble the habitat in the right order. Think: what has to be in place first?",
+   "image": "res://assets/mission/habitat.png",
+   "steps": ["Anchor the floor ring to the ground", "Raise the dome panels", "Seal the airlock and fill it with air"],
+   "wrong_text": "Not yet: something else has to be in place first.",
+   "complete_title": "Habitat dome built",
+   "complete_text": "The dome holds air at Earth pressure. Inside, you can take off your helmet."
+  },
+  "build_solar": {
+   "script": "res://scripts/mission/sequence_task.gd",
+   "title": "Build: Solar Array", "scene": "Mars surface - research base, pad 2",
+   "instructions": "Assemble the solar array in the right order. Think: what has to be in place first?",
+   "image": "res://assets/mission/solar.png",
+   "steps": ["Plant the support posts", "Mount the panels on the posts", "Connect the power cable"],
+   "wrong_text": "Not yet: something else has to be in place first.",
+   "complete_title": "Solar array built",
+   "complete_text": "Power is flowing. Dust storms can dim the Sun for weeks, so the base also stores energy in batteries."
+  },
+  "build_antenna": {
+   "script": "res://scripts/mission/sequence_task.gd",
+   "title": "Build: Antenna", "scene": "Mars surface - research base, pad 3",
+   "instructions": "Assemble the antenna in the right order. Think: what has to be in place first?",
+   "image": "res://assets/mission/antenna.png",
+   "steps": ["Bolt down the tower base", "Lift the dish onto the tower", "Aim the dish at Earth"],
+   "wrong_text": "Not yet: something else has to be in place first.",
+   "complete_title": "Antenna built",
+   "complete_text": "Signal locked. Your first message will reach Earth in a few minutes: radio travels at the speed of light, and Earth is far away."
+  },
+  "build_lab": {
+   "script": "res://scripts/mission/sequence_task.gd",
+   "title": "Build: Science Lab", "scene": "Mars surface - research base, pad 4",
+   "instructions": "Assemble the science lab in the right order. Think: what has to be in place first?",
+   "image": "res://assets/mission/lab.png",
+   "steps": ["Set the lab module on its pad", "Install the instruments", "Raise the weather mast"],
+   "wrong_text": "Not yet: something else has to be in place first.",
+   "complete_title": "Science lab built",
+   "complete_text": "The lab is running. Its first job: test the soil for signs of ancient water."
+  }
+ }
+}

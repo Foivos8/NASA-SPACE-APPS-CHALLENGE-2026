@@ -1,0 +1,433 @@
+{
+ "medical_exam": {
+  "script": "res://scripts/minigames/medical_exam.gd",
+  "title": "Medical Examination",
+  "scene": "Launch morning - crew quarters, Kennedy Space Center",
+  "instructions": "Match each instrument to what it measures. Click an instrument, then click its line on the checklist (or drag it there).",
+  "doctor_line": "Flight surgeon: 'One last check before you fly. Tell me what each instrument is for.'",
+  "pairs": [
+   {
+    "id": "heart_monitor",
+    "name": "Heart monitor",
+    "icon": "icon_heart_monitor.png",
+    "purpose": "Heart rate",
+    "reading": "64 beats per minute",
+    "explain": "Sensors on the chest pick up the electrical pulse of every heartbeat.",
+    "hint": "This one uses sticky sensors on the chest and draws a jumping line on a screen."
+   },
+   {
+    "id": "bp_monitor",
+    "name": "Blood pressure monitor",
+    "icon": "icon_bp_monitor.png",
+    "purpose": "Blood pressure",
+    "reading": "118 over 76",
+    "explain": "The cuff squeezes the arm to feel how hard the blood pushes on the artery walls.",
+    "hint": "This one has a cuff that wraps around the upper arm and squeezes."
+   },
+   {
+    "id": "thermometer",
+    "name": "Thermometer",
+    "icon": "icon_thermometer.png",
+    "purpose": "Body temperature",
+    "reading": "36.7 C",
+    "explain": "A raised temperature is an early sign of infection.",
+    "hint": "This one senses how warm the body is."
+   }
+  ],
+  "complete_title": "Cleared for flight",
+  "complete_text": "Flight surgeon: 'Heart, blood pressure and temperature all normal. You are fit to fly.'",
+  "fact": "DID YOU KNOW? Small sensors taped to each astronaut's chest sent heart rate and breathing to a doctor's console in Mission Control for the whole flight. Medical checks changed this crew: Ken Mattingly was replaced by Jack Swigert days before launch after being exposed to German measles. He never caught it."
+ },
+ "suit_up": {
+  "script": "res://scripts/minigames/suit_up.gd",
+  "title": "Suit Up!",
+  "scene": "Launch morning - suit room, Kennedy Space Center",
+  "instructions": "Dress the astronaut for launch. Drag each item onto the right part of the body (or click the item, then the body part). Order matters.",
+  "items": [
+   {
+    "id": "suit",
+    "name": "Flight suit",
+    "icon": "icon_suit.png",
+    "layer": "layer_suit.png",
+    "zones": [
+     "body",
+     "chest"
+    ],
+    "requires": [],
+    "placed": "Pressure suit on. It holds air around the body if the cabin ever loses pressure.",
+    "hint": "The flight suit covers the whole body. Drop it on the torso."
+   },
+   {
+    "id": "headset",
+    "name": "Communication headset",
+    "icon": "icon_headset.png",
+    "layer": "layer_headset.png",
+    "zones": [
+     "head"
+    ],
+    "requires": [],
+    "placed": "Headset on. This soft cap holds two earphones and two microphones.",
+    "hint": "The headset is a cap worn on the head."
+   },
+   {
+    "id": "helmet",
+    "name": "Helmet",
+    "icon": "icon_helmet.png",
+    "layer": "layer_helmet.png",
+    "zones": [
+     "head"
+    ],
+    "requires": [
+     "suit",
+     "headset"
+    ],
+    "requires_text": "Not yet. The helmet locks onto the suit's neck ring, and the headset has to be underneath it.",
+    "placed": "Helmet locked. The clear bubble lets you turn your head freely inside it.",
+    "hint": "The helmet goes over the head."
+   },
+   {
+    "id": "gloves",
+    "name": "Gloves",
+    "icon": "icon_gloves.png",
+    "layer": "layer_gloves.png",
+    "zones": [
+     "hands"
+    ],
+    "requires": [
+     "suit"
+    ],
+    "requires_text": "Not yet. The gloves lock onto metal rings on the suit's sleeves, so the suit goes on first.",
+    "placed": "Gloves locked onto the wrist rings. Now the suit is sealed at the hands.",
+    "hint": "The gloves go on the hands."
+   },
+   {
+    "id": "connections",
+    "name": "Safety and suit connections",
+    "icon": "icon_connections.png",
+    "layer": "layer_connections.png",
+    "zones": [
+     "chest"
+    ],
+    "requires": [
+     "suit"
+    ],
+    "requires_text": "Not yet. The hoses plug into connectors on the suit, so the suit goes on first.",
+    "placed": "Hoses connected. Blue brings fresh oxygen in, red carries used air out.",
+    "hint": "The hoses plug into the connectors on the chest."
+   }
+  ],
+  "complete_title": "Suited up",
+  "complete_text": "Suit technician: 'Pressure check is good. You are ready for the ride to the pad.'",
+  "fact": "WHY A SUIT FOR LAUNCH? If the cabin lost its air during the climb, the pressure suit would keep the crew alive. Oxygen flows in through the blue hose and out through the red one. The cloth communications cap was nicknamed the 'Snoopy cap'. Once safely on the way to the Moon, the crew took the suits off and worked in light coveralls."
+ },
+ "instrument_inspection": {
+  "script": "res://scripts/minigames/instrument_inspection.gd",
+  "title": "Instrument Inspection",
+  "scene": "Command Module Odyssey - panel check drill (practice values, not real mission data)",
+  "instructions": "Click each gauge and compare the needle with the green normal range. Report it NORMAL or ABNORMAL. When all five are inspected, call Mission Control.",
+  "abnormal_count": 2,
+  "gauges": [
+   {
+    "id": "electrical",
+    "label": "Electrical power",
+    "unit": "V",
+    "min": 20,
+    "max": 36,
+    "normal_min": 26,
+    "normal_max": 30,
+    "decimals": 1,
+    "low_text": "low voltage",
+    "high_text": "high voltage"
+   },
+   {
+    "id": "pressure",
+    "label": "Cabin pressure",
+    "unit": "psi",
+    "min": 0,
+    "max": 10,
+    "normal_min": 4.5,
+    "normal_max": 5.5,
+    "decimals": 1,
+    "low_text": "low cabin pressure",
+    "high_text": "high cabin pressure"
+   },
+   {
+    "id": "oxygen",
+    "label": "Oxygen supply",
+    "unit": "%",
+    "min": 0,
+    "max": 100,
+    "normal_min": 70,
+    "normal_max": 100,
+    "decimals": 0,
+    "low_text": "low oxygen quantity",
+    "high_text": ""
+   },
+   {
+    "id": "temperature",
+    "label": "Temperature",
+    "unit": "C",
+    "min": 0,
+    "max": 40,
+    "normal_min": 18,
+    "normal_max": 27,
+    "decimals": 0,
+    "low_text": "cabin too cold",
+    "high_text": "cabin too warm"
+   },
+   {
+    "id": "guidance",
+    "label": "Guidance status",
+    "unit": "deg",
+    "min": 0,
+    "max": 5,
+    "normal_min": 0,
+    "normal_max": 1,
+    "decimals": 1,
+    "low_text": "",
+    "high_text": "guidance platform drifting off alignment"
+   }
+  ],
+  "complete_title": "Inspection complete",
+  "houston_reply": "Houston: 'Copy, Odyssey. We see the same on our screens. Good catch.'",
+  "fact": "IN THE REAL MISSION every reading on the panel was also radioed to the ground. In Mission Control each flight controller watched one system: EECOM, for example, owned electrical power and life support."
+ },
+ "comm_houston": {
+  "script": "res://scripts/minigames/comm_houston.gd",
+  "title": "Communication with Houston",
+  "scene": "Command Module Odyssey - voice link to Mission Control (practice exchange)",
+  "instructions": "Read each call from Mission Control and pick the best reply. Use what you learned in the medical exam, the suit room and the instrument inspection.",
+  "readouts": [
+   {
+    "id": "bus",
+    "label": "MAIN BUS",
+    "value": "28 V"
+   },
+   {
+    "id": "press",
+    "label": "CABIN PRESS",
+    "value": "5.0 psi"
+   },
+   {
+    "id": "temp",
+    "label": "CABIN TEMP",
+    "value": "22 C"
+   }
+  ],
+  "scenarios": [
+   {
+    "tag": "Radio check",
+    "message": "Apollo 13, Houston. Radio check. How do you read?",
+    "options": [
+     {
+      "text": "Houston, Apollo 13. Reading you loud and clear.",
+      "ok": true,
+      "reply": "Roger, Thirteen. You are loud and clear as well."
+     },
+     {
+      "text": "Yeah, I can hear you fine.",
+      "ok": false,
+      "why": "A radio call starts with who you are calling and who you are, so nobody has to guess who is speaking."
+     },
+     {
+      "text": "(Say nothing and wait.)",
+      "ok": false,
+      "why": "Silence tells Houston the radio may be broken. A radio check always needs an answer."
+     }
+    ]
+   },
+   {
+    "tag": "Instrument reading",
+    "message": "Apollo 13, Houston. Read us your main bus voltage and tell us if it is in limits.",
+    "options": [
+     {
+      "text": "Houston, main bus reads 28 volts. That is inside the normal 26 to 30.",
+      "ok": true,
+      "reply": "Copy 28 volts, Thirteen. That matches our screens."
+     },
+     {
+      "text": "Houston, main bus reads 28 volts. That is too low.",
+      "ok": false,
+      "why": "Think back to the instrument inspection: normal electrical power is 26 to 30 volts. 28 is inside that range."
+     },
+     {
+      "text": "Houston, the power looks fine to me.",
+      "ok": false,
+      "why": "'Looks fine' is an opinion. Mission Control needs the number so they can compare it with their own screens."
+     }
+    ]
+   },
+   {
+    "tag": "Broken message",
+    "static": true,
+    "message": "Apollo 13, Hou--zzzt--firm your su--zzzt-- hoses are --zzzt--",
+    "options": [
+     {
+      "text": "Houston, Apollo 13. You are breaking up. Say again.",
+      "ok": true,
+      "reply": ""
+     },
+     {
+      "text": "Roger, Houston.",
+      "ok": false,
+      "why": "'Roger' means 'I received and understood your message'. You did not, so do not say it just to be polite."
+     },
+     {
+      "text": "Houston, I think you want me to check the hatch.",
+      "ok": false,
+      "why": "Never guess at an instruction. If you did not hear it clearly, ask for it again."
+     }
+    ]
+   },
+   {
+    "tag": "Request from Mission Control",
+    "message": "Apollo 13, Houston. I say again: confirm your suit oxygen hoses are connected.",
+    "options": [
+     {
+      "text": "Houston, hoses connected. Blue is bringing oxygen in, red is carrying it out.",
+      "ok": true,
+      "reply": "Copy, Thirteen. Your suit loop looks good from here too."
+     },
+     {
+      "text": "Houston, hoses connected. Red is bringing oxygen in, blue is carrying it out.",
+      "ok": false,
+      "why": "Think back to suiting up: the blue hose brings fresh oxygen in and the red one carries used air out."
+     },
+     {
+      "text": "Houston, I took the hoses off. They were in the way.",
+      "ok": false,
+      "why": "The hoses are your oxygen supply during launch. They stay connected."
+     }
+    ]
+   },
+   {
+    "tag": "Possible problem",
+    "set_readout": {
+     "temp": "31 C"
+    },
+    "alert": "temp",
+    "message": "Apollo 13, Houston. Anything unusual on your panel before we poll the room?",
+    "options": [
+     {
+      "text": "Houston, cabin temperature reads 31 degrees. Normal is 18 to 27.",
+      "ok": true,
+      "reply": "Good call, Thirteen. Ground cooling was set too low. We are adjusting it now."
+     },
+     {
+      "text": "Negative, Houston. Everything is normal.",
+      "ok": false,
+      "why": "Look at your readouts: cabin temperature is 31, above the normal 18 to 27. Report anything out of limits, even if it seems small."
+     },
+     {
+      "text": "Houston, we have an emergency! Stop the launch!",
+      "ok": false,
+      "why": "Stay calm and give the facts: what the reading is and what it should be. The whole team decides what it means."
+     }
+    ]
+   }
+  ],
+  "closing": "Apollo 13, Houston. Communications are GO. Stand by for the Go / No-Go poll.",
+  "complete_title": "Communications are GO",
+  "complete_text": "Mission Control confirmed your link. Every call you made gave a name, a fact and a number.",
+  "fact": "DID YOU KNOW? Only one person in Mission Control talked to the crew: the CAPCOM, who was always an astronaut. For Apollo 13's launch it was Joe Kerwin. Short fixed words kept messages clear: 'Roger' (I received that), 'Say again' (repeat it), 'Affirmative' and 'Negative' (yes and no)."
+ },
+ "launch_sequence": {
+  "script": "res://scripts/minigames/launch_sequence.gd",
+  "title": "Launch Sequence",
+  "scene": "Launch Complex 39A - final checks and the last 15 seconds of the countdown (simplified for the game)",
+  "instructions": "Watch the clock and the indicators. When Launch Control calls, press the right control before the yellow bar runs out. Miss a call and the count holds.",
+  "intro": "Launch Control: 'Apollo 13, this is Launch Control. We are holding at T minus 15 seconds for your final checks.'",
+  "resume": "Launch Control: 'Final checks complete. The count is running: fifteen seconds.'",
+  "start_seconds": 15,
+  "skip_waiting": false,
+  "bus": {
+   "label": "MAIN BUS",
+   "unit": "V",
+   "normal_min": 26,
+   "normal_max": 30,
+   "decimals": 1,
+   "bad_low": 23.5
+  },
+  "cabin": {
+   "label": "CABIN PRESS",
+   "unit": "psi",
+   "normal_min": 4.5,
+   "normal_max": 5.5,
+   "decimals": 1,
+   "bad_low": 3.8
+  },
+  "tasks": [
+   {
+    "id": "systems",
+    "type": "switches",
+    "controls": [
+     "guidance",
+     "power",
+     "life_support"
+    ],
+    "prompt": "Launch Control: 'Apollo 13, confirm spacecraft systems ready.' Press GUIDANCE, POWER and LIFE SUPPORT.",
+    "done": "All three systems show green. Launch Control: 'Copy, spacecraft ready.'",
+    "timeout": "Launch Control did not get your systems confirmation.",
+    "prep": true,
+    "window": 8
+   },
+   {
+    "id": "range",
+    "type": "range",
+    "prompt": "Launch Control: 'Check main bus voltage and cabin pressure.' Read the two values, then press IN RANGE or OUT OF RANGE.",
+    "backup": "Launch Control: 'Copy, we see it. Switching to the backup sensor... it reads normal now. Confirm.'",
+    "done": "Both readings inside their normal range. Launch Control: 'Copy, power and pressure are good.'",
+    "timeout": "Launch Control did not get your power and pressure report.",
+    "prep": true,
+    "window": 8
+   },
+   {
+    "id": "comm",
+    "type": "press",
+    "control": "talk",
+    "prompt": "Launch Control: 'Apollo 13, voice check. How do you read?' Press PUSH TO TALK.",
+    "done": "You: 'Launch Control, Apollo 13. Loud and clear.' The COMM lamp turns green.",
+    "timeout": "No answer to the voice check.",
+    "prep": true,
+    "window": 5
+   },
+   {
+    "id": "guidance_release",
+    "type": "press",
+    "control": "ack",
+    "start": 15,
+    "deadline": 11,
+    "prompt": "Launch Control: 'Guidance is internal.' The rocket is now steering by its own computer. Press ACKNOWLEDGE.",
+    "done": "Acknowledged. Ten seconds.",
+    "timeout": "The call was not acknowledged."
+   },
+   {
+    "id": "ignition",
+    "type": "press",
+    "control": "ack",
+    "start": 9,
+    "deadline": 5,
+    "ignite": true,
+    "prompt": "'Ignition sequence start!' The five first-stage engines are lighting. Press ACKNOWLEDGE.",
+    "done": "Acknowledged. All five engines running.",
+    "timeout": "The ignition call was not acknowledged."
+   },
+   {
+    "id": "go",
+    "type": "press",
+    "control": "go",
+    "start": 4,
+    "deadline": 0.5,
+    "prompt": "Final call: 'Apollo 13, are you GO?' Press GO FOR LAUNCH now!",
+    "done": "You: 'Apollo 13 is GO!'",
+    "timeout": "No final GO from the spacecraft."
+   }
+  ],
+  "wrong_idle": "Wait for Launch Control's call.",
+  "wrong_control": "That is not the control Launch Control asked for.",
+  "liftoff_text": "LIFTOFF! We have a liftoff. The hold-down arms let go and the Saturn V clears the tower.",
+  "complete_title": "Liftoff of Apollo 13",
+  "complete_text": "Successful launch. The rocket is climbing and the countdown is behind you.",
+  "fact": "HOW IT REALLY WORKED: this countdown is simplified for the game. In the real one a computer ran the last three minutes automatically, and the crew mostly watched and reported. Two things here are real: the first-stage engines began to light 8.9 seconds before liftoff, and the rocket was held down on the pad until all five reached full thrust."
+ }
+}

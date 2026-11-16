@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://brepjtm40t866"]
+
+[ext_resource type="Script" uid="uid://dh4ici6pg3wjk" path="res://scripts/levels/level1_comm.gd" id="1"]
+
+[node name="Level1Comm" type="CanvasLayer" unique_id=1121663713]
+script = ExtResource("1")

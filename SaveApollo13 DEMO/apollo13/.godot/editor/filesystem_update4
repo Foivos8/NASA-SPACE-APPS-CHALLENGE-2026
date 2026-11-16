@@ -1,0 +1,11 @@
+res://scripts/audio_manager.gd
+res://scripts/level.gd
+res://scripts/levels/level1_comm.gd
+res://scripts/minigames/comm_houston.gd
+res://scripts/minigames/launch_sequence.gd
+res://scripts/minigames/minigame_base.gd
+res://scripts/ui/level_ui.gd
+res://data/level1_objects.txt
+res://scripts/ui/type_text.gd
+res://tools/smoke_test.gd
+res://level1_comm.tscn

@@ -1,0 +1,1948 @@
+{
+ "name": "Design Your Mission - mars surface",
+ "tile_size": 32,
+ "width": 30,
+ "height": 20,
+ "atlas": {
+  "image": "res://assets/mission/tileset_surface.png",
+  "columns": 8,
+  "tile_names": {
+   "moon_ground_0": 0,
+   "moon_ground_1": 1,
+   "moon_ground_2": 2,
+   "moon_crater": 3,
+   "moon_rock": 4,
+   "mars_ground_0": 5,
+   "mars_ground_1": 6,
+   "mars_ground_2": 7,
+   "mars_dune": 8,
+   "mars_rock": 9
+  },
+  "solid_ids": [
+   4,
+   9
+  ]
+ },
+ "layers": {
+  "ground": [
+   [
+    6,
+    7,
+    6,
+    8,
+    7,
+    7,
+    5,
+    5,
+    7,
+    6,
+    7,
+    7,
+    5,
+    5,
+    6,
+    6,
+    5,
+    5,
+    8,
+    7,
+    9,
+    5,
+    7,
+    6,
+    6,
+    8,
+    7,
+    7,
+    7,
+    5
+   ],
+   [
+    9,
+    5,
+    7,
+    5,
+    5,
+    5,
+    5,
+    5,
+    7,
+    5,
+    6,
+    6,
+    6,
+    7,
+    5,
+    7,
+    5,
+    7,
+    9,
+    6,
+    5,
+    7,
+    5,
+    6,
+    7,
+    6,
+    6,
+    7,
+    5,
+    7
+   ],
+   [
+    6,
+    6,
+    5,
+    7,
+    9,
+    5,
+    5,
+    7,
+    5,
+    6,
+    8,
+    6,
+    6,
+    5,
+    5,
+    7,
+    5,
+    8,
+    5,
+    5,
+    6,
+    6,
+    7,
+    6,
+    6,
+    9,
+    7,
+    7,
+    5,
+    7
+   ],
+   [
+    8,
+    6,
+    8,
+    6,
+    6,
+    5,
+    6,
+    5,
+    8,
+    9,
+    7,
+    5,
+    5,
+    5,
+    6,
+    9,
+    5,
+    7,
+    7,
+    5,
+    6,
+    7,
+    5,
+    7,
+    5,
+    6,
+    7,
+    6,
+    9,
+    6
+   ],
+   [
+    6,
+    5,
+    5,
+    6,
+    7,
+    6,
+    5,
+    5,
+    5,
+    6,
+    7,
+    7,
+    7,
+    5,
+    5,
+    9,
+    5,
+    6,
+    6,
+    5,
+    7,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    9,
+    7,
+    7
+   ],
+   [
+    5,
+    5,
+    7,
+    6,
+    6,
+    9,
+    9,
+    5,
+    7,
+    6,
+    7,
+    5,
+    6,
+    5,
+    7,
+    5,
+    6,
+    5,
+    7,
+    5,
+    7,
+    5,
+    5,
+    7,
+    7,
+    7,
+    5,
+    7,
+    9,
+    6
+   ],
+   [
+    7,
+    8,
+    6,
+    9,
+    5,
+    5,
+    9,
+    7,
+    6,
+    5,
+    7,
+    7,
+    8,
+    8,
+    6,
+    8,
+    9,
+    6,
+    7,
+    5,
+    7,
+    5,
+    5,
+    5,
+    6,
+    7,
+    7,
+    8,
+    7,
+    5
+   ],
+   [
+    6,
+    8,
+    5,
+    8,
+    9,
+    5,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    7,
+    7,
+    5,
+    5,
+    6,
+    5,
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    5,
+    7
+   ],
+   [
+    5,
+    5,
+    6,
+    6,
+    7,
+    6,
+    5,
+    5,
+    8,
+    7,
+    5,
+    6,
+    5,
+    7,
+    6,
+    6,
+    5,
+    5,
+    5,
+    6,
+    7,
+    6,
+    7,
+    5,
+    7,
+    7,
+    7,
+    5,
+    6,
+    6
+   ],
+   [
+    5,
+    7,
+    6,
+    5,
+    6,
+    5,
+    6,
+    7,
+    8,
+    7,
+    7,
+    6,
+    6,
+    7,
+    5,
+    7,
+    5,
+    5,
+    5,
+    7,
+    5,
+    6,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    7,
+    6
+   ],
+   [
+    6,
+    6,
+    7,
+    5,
+    7,
+    7,
+    5,
+    6,
+    7,
+    5,
+    6,
+    5,
+    5,
+    7,
+    5,
+    6,
+    7,
+    7,
+    6,
+    6,
+    5,
+    6,
+    6,
+    5,
+    7,
+    7,
+    5,
+    7,
+    5,
+    6
+   ],
+   [
+    7,
+    6,
+    6,
+    5,
+    6,
+    6,
+    7,
+    6,
+    5,
+    7,
+    6,
+    5,
+    5,
+    6,
+    8,
+    7,
+    8,
+    5,
+    5,
+    5,
+    6,
+    6,
+    5,
+    7,
+    5,
+    6,
+    5,
+    5,
+    8,
+    9
+   ],
+   [
+    6,
+    5,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    9,
+    7,
+    8,
+    6,
+    6,
+    5,
+    5,
+    6,
+    7,
+    5,
+    7,
+    7,
+    8,
+    8,
+    6,
+    6,
+    8,
+    8,
+    8,
+    7,
+    5,
+    6
+   ],
+   [
+    6,
+    5,
+    5,
+    9,
+    5,
+    8,
+    5,
+    7,
+    5,
+    6,
+    5,
+    7,
+    7,
+    7,
+    8,
+    6,
+    5,
+    7,
+    5,
+    5,
+    6,
+    6,
+    5,
+    7,
+    8,
+    6,
+    9,
+    7,
+    5,
+    5
+   ],
+   [
+    5,
+    6,
+    6,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    6,
+    7,
+    5,
+    5,
+    6,
+    7,
+    6,
+    5,
+    6,
+    6,
+    5,
+    7,
+    5,
+    6,
+    7,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6
+   ],
+   [
+    7,
+    5,
+    5,
+    7,
+    7,
+    7,
+    5,
+    5,
+    5,
+    8,
+    5,
+    6,
+    7,
+    6,
+    6,
+    7,
+    5,
+    6,
+    7,
+    5,
+    5,
+    6,
+    6,
+    7,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5
+   ],
+   [
+    6,
+    5,
+    5,
+    9,
+    6,
+    7,
+    8,
+    6,
+    5,
+    7,
+    7,
+    7,
+    8,
+    7,
+    6,
+    6,
+    7,
+    7,
+    5,
+    9,
+    6,
+    7,
+    7,
+    6,
+    7,
+    7,
+    7,
+    5,
+    7,
+    7
+   ],
+   [
+    7,
+    6,
+    6,
+    7,
+    6,
+    9,
+    9,
+    6,
+    5,
+    7,
+    7,
+    6,
+    7,
+    6,
+    5,
+    6,
+    7,
+    5,
+    7,
+    5,
+    7,
+    6,
+    5,
+    7,
+    9,
+    7,
+    6,
+    9,
+    8,
+    5
+   ],
+   [
+    6,
+    5,
+    7,
+    5,
+    5,
+    7,
+    6,
+    6,
+    6,
+    6,
+    5,
+    6,
+    6,
+    5,
+    6,
+    6,
+    6,
+    7,
+    6,
+    9,
+    5,
+    6,
+    7,
+    5,
+    6,
+    5,
+    7,
+    5,
+    9,
+    5
+   ],
+   [
+    5,
+    5,
+    5,
+    8,
+    6,
+    6,
+    7,
+    6,
+    5,
+    7,
+    9,
+    5,
+    6,
+    7,
+    7,
+    5,
+    7,
+    7,
+    8,
+    7,
+    8,
+    7,
+    7,
+    6,
+    5,
+    6,
+    7,
+    6,
+    7,
+    7
+   ]
+  ],
+  "objects": [
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ]
+  ]
+ },
+ "player_start": [
+  3,
+  11
+ ],
+ "npcs": [],
+ "zones": [],
+ "hatch_tiles": [],
+ "covered_window_tiles": [],
+ "props": [
+  {
+   "id": "lander",
+   "sprite": "lander.png",
+   "tile": [
+    3,
+    9
+   ],
+   "size": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "hover",
+   "sprite": "hover_broken.png",
+   "tile": [
+    9,
+    5
+   ],
+   "size": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "crate_1",
+   "sprite": "crate.png",
+   "tile": [
+    6,
+    9
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "crate_2",
+   "sprite": "crate.png",
+   "tile": [
+    6,
+    11
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "site_habitat",
+   "sprite": "pad.png",
+   "tile": [
+    18,
+    4
+   ],
+   "size": [
+    2,
+    2
+   ],
+   "built": "habitat.png"
+  },
+  {
+   "id": "site_solar",
+   "sprite": "pad.png",
+   "tile": [
+    23,
+    4
+   ],
+   "size": [
+    2,
+    2
+   ],
+   "built": "solar.png"
+  },
+  {
+   "id": "site_antenna",
+   "sprite": "pad.png",
+   "tile": [
+    18,
+    9
+   ],
+   "size": [
+    2,
+    2
+   ],
+   "built": "antenna.png"
+  },
+  {
+   "id": "site_lab",
+   "sprite": "pad.png",
+   "tile": [
+    23,
+    9
+   ],
+   "size": [
+    2,
+    2
+   ],
+   "built": "lab.png"
+  }
+ ],
+ "interactables": [
+  {
+   "id": "lander",
+   "name": "Lander",
+   "tiles": [
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     3,
+     10
+    ],
+    [
+     4,
+     10
+    ]
+   ],
+   "required": true,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Lander",
+     "pages": [
+      "Your ride home. Repair the hover vehicle and finish the research base before you leave."
+     ]
+    },
+    "return": {
+     "title": "Lander",
+     "pages": [
+      "The base is running and the hover vehicle is parked. You climb aboard and seal the hatch.",
+      "Mission Control: 'Outstanding. You are GO for liftoff from Mars.'"
+     ]
+    }
+   },
+   "stand": [
+    [
+     2,
+     9
+    ],
+    [
+     2,
+     10
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     3,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "hover",
+   "name": "Hover vehicle",
+   "tiles": [
+    [
+     9,
+     5
+    ],
+    [
+     10,
+     5
+    ]
+   ],
+   "required": true,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Hover vehicle",
+     "pages": [
+      "The repaired hover vehicle hums quietly, floating a hand's width above the dust."
+     ]
+    },
+    "repair": {
+     "title": "Broken hover vehicle",
+     "minigame": "hover_repair",
+     "pages": [
+      "A hover vehicle left by an earlier supply drop. Its canopy is cracked, a lift pad hangs loose and the power cell is dead.",
+      "The base parts are too heavy to carry by hand across this plain. You need this machine working."
+     ]
+    }
+   },
+   "stand": [
+    [
+     8,
+     5
+    ],
+    [
+     9,
+     4
+    ],
+    [
+     9,
+     6
+    ],
+    [
+     10,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "crate_1",
+   "name": "Supply crate",
+   "tiles": [
+    [
+     6,
+     9
+    ]
+   ],
+   "required": false,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Supply crate",
+     "pages": [
+      "Parts for the research base, dropped ahead of you by a cargo flight. They will ride on the hover vehicle."
+     ]
+    }
+   },
+   "stand": [
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     6,
+     10
+    ],
+    [
+     7,
+     9
+    ]
+   ]
+  },
+  {
+   "id": "crate_2",
+   "name": "Supply crate",
+   "tiles": [
+    [
+     6,
+     11
+    ]
+   ],
+   "required": false,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Supply crate",
+     "pages": [
+      "Food, water and air for the first weeks. On Mars a day lasts 24 hours and 37 minutes, almost like home."
+     ]
+    }
+   },
+   "stand": [
+    [
+     5,
+     11
+    ],
+    [
+     6,
+     10
+    ],
+    [
+     6,
+     12
+    ],
+    [
+     7,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "site_habitat",
+   "name": "Build site: Habitat dome",
+   "tiles": [
+    [
+     18,
+     4
+    ],
+    [
+     19,
+     4
+    ],
+    [
+     18,
+     5
+    ],
+    [
+     19,
+     5
+    ]
+   ],
+   "required": true,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Build site: Habitat dome",
+     "pages": [
+      "A marked pad for the habitat dome. Repair the hover vehicle first: it carries the parts."
+     ]
+    },
+    "base": {
+     "title": "Build site: Habitat dome",
+     "minigame": "build_habitat",
+     "pages": [
+      "A pressurised dome to live in. Mars air is mostly carbon dioxide and a hundred times thinner than Earth's."
+     ]
+    },
+    "built": {
+     "title": "Habitat dome",
+     "pages": [
+      "The habitat dome is assembled and working."
+     ]
+    }
+   },
+   "stand": [
+    [
+     17,
+     4
+    ],
+    [
+     17,
+     5
+    ],
+    [
+     18,
+     3
+    ],
+    [
+     18,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "site_solar",
+   "name": "Build site: Solar array",
+   "tiles": [
+    [
+     23,
+     4
+    ],
+    [
+     24,
+     4
+    ],
+    [
+     23,
+     5
+    ],
+    [
+     24,
+     5
+    ]
+   ],
+   "required": true,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Build site: Solar array",
+     "pages": [
+      "A marked pad for the solar array. Repair the hover vehicle first: it carries the parts."
+     ]
+    },
+    "base": {
+     "title": "Build site: Solar array",
+     "minigame": "build_solar",
+     "pages": [
+      "Sunlight on Mars is less than half as strong as on Earth, so the base needs wide panels."
+     ]
+    },
+    "built": {
+     "title": "Solar array",
+     "pages": [
+      "The solar array is assembled and working."
+     ]
+    }
+   },
+   "stand": [
+    [
+     22,
+     4
+    ],
+    [
+     22,
+     5
+    ],
+    [
+     23,
+     3
+    ],
+    [
+     23,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "site_antenna",
+   "name": "Build site: Antenna",
+   "tiles": [
+    [
+     18,
+     9
+    ],
+    [
+     19,
+     9
+    ],
+    [
+     18,
+     10
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "required": true,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Build site: Antenna",
+     "pages": [
+      "A marked pad for the antenna. Repair the hover vehicle first: it carries the parts."
+     ]
+    },
+    "base": {
+     "title": "Build site: Antenna",
+     "minigame": "build_antenna",
+     "pages": [
+      "A dish to talk to Earth. A radio signal takes between 3 and 22 minutes to cross the distance, depending on where the planets are."
+     ]
+    },
+    "built": {
+     "title": "Antenna",
+     "pages": [
+      "The antenna is assembled and working."
+     ]
+    }
+   },
+   "stand": [
+    [
+     17,
+     9
+    ],
+    [
+     17,
+     10
+    ],
+    [
+     18,
+     8
+    ],
+    [
+     18,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "site_lab",
+   "name": "Build site: Science lab",
+   "tiles": [
+    [
+     23,
+     9
+    ],
+    [
+     24,
+     9
+    ],
+    [
+     23,
+     10
+    ],
+    [
+     24,
+     10
+    ]
+   ],
+   "required": true,
+   "appearance": "",
+   "steps": {
+    "default": {
+     "title": "Build site: Science lab",
+     "pages": [
+      "A marked pad for the science lab. Repair the hover vehicle first: it carries the parts."
+     ]
+    },
+    "base": {
+     "title": "Build site: Science lab",
+     "minigame": "build_lab",
+     "pages": [
+      "A laboratory with a weather mast, to study the soil, the dust storms and the search for signs of ancient water."
+     ]
+    },
+    "built": {
+     "title": "Science lab",
+     "pages": [
+      "The science lab is assembled and working."
+     ]
+    }
+   },
+   "stand": [
+    [
+     22,
+     9
+    ],
+    [
+     22,
+     10
+    ],
+    [
+     23,
+     8
+    ],
+    [
+     23,
+     11
+    ]
+   ]
+  }
+ ],
+ "objectives": [
+  {
+   "id": "repair",
+   "text": "Repair the broken hover vehicle",
+   "hint": "It lies north-east of the lander.",
+   "type": "interact",
+   "targets": [
+    "hover"
+   ],
+   "markers": [
+    [
+     9,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "base",
+   "text": "Build the scientific research base",
+   "hint": "Four marked pads to the east. Any order.",
+   "type": "interact",
+   "targets": [
+    "site_habitat",
+    "site_solar",
+    "site_antenna",
+    "site_lab"
+   ],
+   "markers": [
+    [
+     18,
+     6
+    ],
+    [
+     23,
+     6
+    ],
+    [
+     18,
+     11
+    ],
+    [
+     23,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "return",
+   "text": "Return to the lander",
+   "hint": "Head back west for the trip home.",
+   "type": "interact",
+   "targets": [
+    "lander"
+   ],
+   "markers": [
+    [
+     3,
+     11
+    ]
+   ]
+  }
+ ],
+ "checklist": [
+  {
+   "id": "repair",
+   "text": "Repair the hover vehicle",
+   "targets": [
+    "hover"
+   ]
+  },
+  {
+   "id": "base",
+   "text": "Build the research base",
+   "targets": [
+    "site_habitat",
+    "site_solar",
+    "site_antenna",
+    "site_lab"
+   ]
+  },
+  {
+   "id": "return",
+   "text": "Return to the lander",
+   "targets": [
+    "lander"
+   ]
+  }
+ ],
+ "launch_events": []
+}

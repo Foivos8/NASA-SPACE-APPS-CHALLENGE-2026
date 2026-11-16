@@ -1,0 +1,268 @@
+{
+ "level1": {
+  "title": "Level 1 - Communication with Houston",
+  "scene": "Launch Complex 39A, 11 April 1970 - practice radio exchange before launch",
+  "instructions": "Read each call from Mission Control and pick the best reply. Remember what Houston tells you: you will need it later.",
+  "checklist": [
+   {
+    "id": "first",
+    "text": "Receive the first message."
+   },
+   {
+    "id": "system",
+    "text": "Confirm spacecraft system status."
+   },
+   {
+    "id": "reading",
+    "text": "Report the instrument reading."
+   },
+   {
+    "id": "request",
+    "text": "Respond to Mission Control."
+   },
+   {
+    "id": "problem",
+    "text": "Report the potential problem."
+   },
+   {
+    "id": "confirm",
+    "text": "Receive Houston's confirmation."
+   },
+   {
+    "id": "countdown",
+    "text": "Complete the final countdown."
+   },
+   {
+    "id": "launch",
+    "text": "Launch the rocket successfully."
+   },
+   {
+    "id": "space",
+    "text": "Exit Earth's atmosphere and reach space."
+   }
+  ],
+  "readouts": [
+   {
+    "id": "bus",
+    "label": "MAIN BUS",
+    "value": "28 V"
+   },
+   {
+    "id": "press",
+    "label": "CABIN PRESS",
+    "value": "5.0 psi"
+   },
+   {
+    "id": "temp",
+    "label": "CABIN TEMP",
+    "value": "22 C"
+   }
+  ],
+  "scenarios": [
+   {
+    "tag": "Radio check",
+    "check": "system",
+    "message": "Apollo 13, Houston. Radio check before we start. How do you read?",
+    "options": [
+     {
+      "text": "Houston, Apollo 13. Reading you loud and clear.",
+      "ok": true,
+      "reply": "Roger, Thirteen. Note these limits: main bus 26 to 30 volts, cabin 18 to 27 degrees."
+     },
+     {
+      "text": "Yeah, I can hear you fine.",
+      "ok": false,
+      "why": "A radio call starts with who you are calling and who you are, so nobody has to guess who is speaking."
+     },
+     {
+      "text": "(Say nothing and wait.)",
+      "ok": false,
+      "why": "Silence tells Houston the radio may be broken. A radio check always needs an answer."
+     }
+    ]
+   },
+   {
+    "tag": "Instrument reading",
+    "check": "reading",
+    "message": "Apollo 13, Houston. Read us your main bus voltage. Is it in limits?",
+    "options": [
+     {
+      "text": "Houston, main bus reads 28 volts. That is inside 26 to 30.",
+      "ok": true,
+      "reply": "Copy 28 volts, Thirteen. That matches our screens."
+     },
+     {
+      "text": "Houston, main bus reads 28 volts. That is too low.",
+      "ok": false,
+      "why": "Houston gave you the limits a moment ago: 26 to 30 volts. 28 is inside them."
+     },
+     {
+      "text": "Houston, the power looks fine to me.",
+      "ok": false,
+      "why": "'Looks fine' is an opinion. Mission Control needs the number so they can compare it with their own screens."
+     }
+    ]
+   },
+   {
+    "tag": "Broken message",
+    "static": true,
+    "message": "Apollo 13, Hou--zzzt--itch your cab--zzzt-- fan to --zzzt--",
+    "options": [
+     {
+      "text": "Houston, Apollo 13. You are breaking up. Say again.",
+      "ok": true,
+      "reply": ""
+     },
+     {
+      "text": "Roger, Houston.",
+      "ok": false,
+      "why": "'Roger' means 'I received and understood'. You did not, so do not say it just to be polite."
+     },
+     {
+      "text": "Houston, I think you want me to check the hatch.",
+      "ok": false,
+      "why": "Never guess at an instruction. If you did not hear it clearly, ask for it again."
+     }
+    ]
+   },
+   {
+    "tag": "Request from Mission Control",
+    "check": "request",
+    "message": "Apollo 13, Houston. I say again: switch your cabin fan to HIGH and confirm.",
+    "options": [
+     {
+      "text": "Houston, Apollo 13. Cabin fan is on HIGH.",
+      "ok": true,
+      "reply": "Copy, fan on HIGH. Thank you, Thirteen."
+     },
+     {
+      "text": "Houston, I will do that after the launch.",
+      "ok": false,
+      "why": "When Mission Control asks for an action now, do it and confirm it. They are waiting for your word before they go on."
+     },
+     {
+      "text": "Houston, why? The fan is fine as it is.",
+      "ok": false,
+      "why": "Controllers can see data you cannot. Carry out the request, confirm it, and ask your question afterwards."
+     }
+    ]
+   },
+   {
+    "tag": "Possible problem",
+    "check": "problem",
+    "set_readout": {
+     "temp": "31 C"
+    },
+    "alert": "temp",
+    "message": "Apollo 13, Houston. Anything unusual on your panel before we poll the room?",
+    "options": [
+     {
+      "text": "Houston, cabin temperature reads 31 degrees. Your limit was 27.",
+      "ok": true,
+      "reply": "Good call, Thirteen. Ground cooling was set too low. We are fixing it now."
+     },
+     {
+      "text": "Negative, Houston. Everything is normal.",
+      "ok": false,
+      "why": "Check your readouts: cabin temperature is 31. Houston's limit was 18 to 27. Report anything out of limits."
+     },
+     {
+      "text": "Houston, we have an emergency! Stop the launch!",
+      "ok": false,
+      "why": "Stay calm and give the facts: what the reading is and what it should be. The whole team decides what it means."
+     }
+    ]
+   }
+  ],
+  "closing": "Apollo 13, Houston. The room is polled and every controller is GO. You are GO for launch.",
+  "connect_prompt": "Press PUSH TO TALK to open the voice channel to Mission Control.",
+  "go_prompt": "Houston has confirmed. Answer for the crew to start the final countdown.",
+  "launch_captions": {
+   "countdown": "Final countdown. In the real launch a computer ran these last seconds; the crew watched their instruments.",
+   "ignition": "Ignition sequence start! The five F-1 engines of the first stage light and build up thrust.",
+   "liftoff": "LIFTOFF! 2:13 p.m., 11 April 1970. The hold-down arms release the Saturn V.",
+   "tower": "Tower cleared. Control of the flight passes from Florida to Mission Control in Houston.",
+   "climb": "The sky darkens as the air thins. The first stage burns out after 2 minutes 44 seconds and drops away.",
+   "high": "The second and third stages keep pushing. The blue of the sky fades to black.",
+   "space": "Engine cutoff, 12 minutes 40 seconds after liftoff. Apollo 13 is in orbit, 185 km above the Earth."
+  },
+  "complete_title": "Level 1 complete",
+  "complete_text": "You kept a clear radio link with Mission Control and Apollo 13 has reached space.\n\nEvery good call had three parts: who you are calling, who you are, and a fact with a number.\n\nDID YOU KNOW? Only one person in Mission Control spoke to the crew: the CAPCOM, always a fellow astronaut. For Apollo 13's launch it was Joe Kerwin.",
+  "talk_during_poll": true
+ },
+ "level2": {
+  "title": "Level 2 - Launch Sequence: the journey to the Moon",
+  "scene": "Apollo 13, April 1970 - from Earth orbit toward the Moon (distances on the map are not to scale)",
+  "instructions": "Follow Apollo 13 after its launch. Press the button under the view to carry out each step.",
+  "checklist": [
+   {
+    "id": "start",
+    "text": "Begin in space after exiting Earth's atmosphere."
+   },
+   {
+    "id": "away",
+    "text": "Watch Apollo 13 travel away from Earth."
+   },
+   {
+    "id": "trajectory",
+    "text": "Observe the trajectory towards the Moon."
+   },
+   {
+    "id": "explosion",
+    "text": "Witness the Service Module explosion."
+   },
+   {
+    "id": "freereturn",
+    "text": "Learn about the free-return trajectory."
+   },
+   {
+    "id": "complete",
+    "text": "Complete the historical mission sequence."
+   }
+  ],
+  "text": {
+   "orbit": "Twelve minutes after liftoff Apollo 13 is circling the Earth, 185 km up. The first two stages of the Saturn V are gone. The third stage, the S-IVB, is still attached.",
+   "orbit_button": "FIRE THE THIRD STAGE",
+   "tli": "2 h 35 min after launch the third stage fires for six minutes. This burn, called translunar injection, raises the speed to about 39,000 km/h and aims Apollo 13 at the Moon.",
+   "tli_done": "Engine off. The Earth is shrinking behind the spacecraft. The rocket's work is finished.",
+   "separate_button": "SEPARATE FROM THE ROCKET",
+   "separate": "The Command and Service Module, Odyssey, lets go of the third stage, turns around, docks with the Lunar Module, Aquarius, and pulls it out.",
+   "separate_done": "Odyssey and Aquarius are now flying nose to nose. The empty third stage drifts away.",
+   "coast_button": "FOLLOW THE TRAJECTORY",
+   "coast": "The engines are off. Apollo 13 coasts toward the Moon, slowing all the way as Earth's gravity pulls it back.",
+   "coast_mid": "30 h 40 min: a short engine burn changes the path so the crew can reach their landing site, Fra Mauro. Remember this burn.",
+   "bang": "55 h 54 min, 321,860 km from Earth: a loud bang shakes the spacecraft. Warning lights come on.",
+   "alarm_button": "MASTER ALARM - CALL HOUSTON",
+   "call_1": "Apollo 13: \"Houston, we've had a problem.\"",
+   "call_2": "Mission Control: \"This is Houston. Say again, please.\"",
+   "call_caption": "Jack Swigert, then Jim Lovell, report the problem to Mission Control.",
+   "incident_button": "WHAT HAPPENED?",
+   "incident": "MISSION INCIDENT: oxygen tank 2 in the Service Module burst and damaged tank 1. Without oxygen the fuel cells stopped making electricity and water. The Moon landing was cancelled.",
+   "incident_2": "The Saturn V rocket was not involved; it had done its job two days earlier. The crew moved into the Lunar Module and used it as a lifeboat.",
+   "home_button": "HOW DO THEY GET HOME?",
+   "freereturn": "FREE-RETURN TRAJECTORY: a path on which the Moon's gravity swings the spacecraft around its far side and sends it back to Earth, with no big engine burn needed.",
+   "freereturn_2": "The burn at 30 h 40 min had taken Apollo 13 off that path. Five and a half hours after the accident, the crew fired the Lunar Module's landing engine to get back on it.",
+   "question": "What bends Apollo 13's path around the Moon and back toward Earth?",
+   "options": [
+    {
+     "text": "The Moon's gravity",
+     "ok": true,
+     "reply": "Correct. The Moon's gravity bends the path into a loop, like a ball swung on a string, and Earth's gravity pulls the spacecraft home."
+    },
+    {
+     "text": "The main engine, burning all the way",
+     "ok": false,
+     "why": "The main engine sat in the damaged Service Module and was never used again. On a free-return path the engine is off almost all the time."
+    },
+    {
+     "text": "The solar wind",
+     "ok": false,
+     "why": "The solar wind is far too weak to steer a spacecraft. Think about what large body the path curves around."
+    }
+   ]
+  },
+  "complete_title": "Level 2 complete",
+  "complete_text": "MISSION INCIDENT: 55 hours 54 minutes into the flight, an oxygen tank in Apollo 13's Service Module burst. The spacecraft was damaged, not destroyed.\n\nThe crew gave up the Moon landing, moved into the Lunar Module, and swung around the far side of the Moon on a free-return path, passing 254 km above the surface.\n\nJim Lovell, Jack Swigert and Fred Haise splashed down safely in the Pacific on 17 April 1970, almost six days after launch. NASA called the flight a 'successful failure'.",
+  "talk_after_accident": true
+ }
+}
